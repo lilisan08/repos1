@@ -1,24 +1,32 @@
 #include <stdio.h>
 int main ()
 {
-	int hr, doble, sal,extra, total;
-	printf("ingrese la cantidad de horas trabajadas:");
-	scanf("%d", &hr);
-	printf("ingrese la cantidad de su sarario:");
-	scanf("%d",&sal);
-	if(hr<41){
+	int num;
+	printf("ingresa el numero de tu carta:");
+	scanf("%d", &num);
+	
+	if(num==1){
  total=sal*hr;
- printf("El pago total es de: %d\n",total);
+ printf("tu carta es as:");
  }
- else if(hr<50){
- extra=sal/2;
- total=(sal+extra)*hr;
- printf ("El pago total es de: %d\n",total);
+ else if(num==10){
+ printf ("tu carta es sota");
 }
- else if(hr>50){
- doble=sal*2;
- total=doble*hr;
- printf("El pago total es de: %d\n",total);
+ else if(num==11){
+ printf("tu carta es caballo");
  }
+ else if(num==12){
+ printf("tu carta es rey");
+ }
+ else if(num==11){
+ printf("tu carta es caballo");
+ }
+ else if(num==2|3|4|5|6|7|8|9){
+ printf("tu carta no es figura, ni tampoco as");
+ }
+ else if(num>12){
+ printf("este numero no esta en la baraja española");
+ }
+
  return 0;
 }
