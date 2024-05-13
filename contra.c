@@ -1,15 +1,16 @@
-#include <stdio.h>
+#include <stdio.h>//vercion 2 examen practico 13/05/2024
 #include <string.h>
-int main() {
-	char n[15], contra[15];
-	int intentos =3;
+int main() 
+{
+  char n[15], contra[15];
+  int intentos =3;
     do{
-	printf("ingresa tu nombre:");
+   printf("ingresa tu nombre de usuario:");
     scanf("%s", &n);
-    printf("ingresa la contraseña");
+    printf("ingresa la contrasena");
     scanf("%s", &contra);
-   if (strcmp(n, "root") == 0 && strcmp(contra, "1234") == 0){
-    printf("Bienvenido:%s\n",n);
+   if (strcmp(n, "lilian") == 0 && strcmp(contra, "2bm38") == 0){
+    printf("Bienvenido al sisitema:%s\n",n);
       break;
      }else{
         intentos--;
@@ -20,6 +21,6 @@ int main() {
       break;
      }
     }
-  } while (intentos>0);
+  }while(intentos>0);
  return 0;
 }
