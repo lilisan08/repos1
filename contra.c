@@ -1,26 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 int main() {
-	char n[15];
-	int contra, i;
+	char n[15], contra[15];
+	int intentos =3;
+    do{
 	printf("ingresa tu nombre:");
-    scanf("%c", &n[15]);
-   if (n, "root")
-    {
-     for (i=1; i <=3; i++) 
-     {
-     printf("Ingresa un pin:");
-     scanf("%d",&contra);
-     if (contra == 1234)
-     {
-      printf("EL pin es correcto\n");
+    scanf("%s", &n);
+    printf("ingresa la contraseña");
+    scanf("%s", &contra);
+   if (strcmp(n, "root") == 0 && strcmp(contra, "1234") == 0){
+    printf("Bienvenido:%s\n",n);
       break;
-     }else if (contra != 1234) {
-       printf("El pin es incorrecto");
-      } 
-      else if (n != "root") 
-     {
-      printf("El nombre es incorrecto");
+     }else{
+        intentos--;
+       if (intentos>0){
+       printf("alguno de los datos es incorrecto; quedan %d intentos.n", intentos); 
+     }else {
+      printf("Se han acabado los intentos permitidos.\n");
+      break;
      }
-
+    }
+  } while (intentos>0);
  return 0;
 }
